@@ -3,7 +3,8 @@
  * @param {IClientAPI} clientAPI
  */
 export default function ValidateBoxId(clientAPI) {
-    let boxId = clientAPI.getValue(), state;
+    const boxId = clientAPI.getValue();
+    let state;
 
     clientAPI.getPageProxy().getClientData().InvDetail.BoxId = "";
     clientAPI.clearValidation();
@@ -20,7 +21,7 @@ export default function ValidateBoxId(clientAPI) {
     } else {
         state = false;
     }
-    ["LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "Content"].forEach(element => {
+    ["LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"].forEach(element => {
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEnabled(state);
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setValue("");
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).redraw();

@@ -24,6 +24,7 @@
 							"Caption": "Box ID",
 							"PlaceHolder": "Scan Box ID",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateBoxId.js",
+							"KeyboardType": "Default",
 							"AlternateInput": "Barcode",
 							"Enabled": false
 						},
@@ -73,7 +74,7 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "Content",
+							"_Name": "LabelId",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Content Label",
@@ -117,5 +118,19 @@
 			}
 		],
 		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "Signout",
+				"Caption": "Sign Out ",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/PackedBoxTracking/Actions/Logout.action"
+			}
+		]
 	}
 }

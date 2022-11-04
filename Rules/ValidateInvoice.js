@@ -3,7 +3,7 @@
  * @param {IClientAPI} clientAPI
  */
 export default function ValidateInvoice(clientAPI) {
-    let vbeln = clientAPI.getValue();
+    const vbeln = clientAPI.getValue();
 
     if (vbeln.length >= 10) {
         return clientAPI.executeAction({

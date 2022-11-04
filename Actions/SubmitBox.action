@@ -3,7 +3,7 @@
 	"ActionResult": {
 		"_Name": "SubmitBox"
 	},
-	"OnFailure": "/PackedBoxTracking/Actions/FailureMessage.action",
+	"OnFailure": "/PackedBoxTracking/Rules/SubmitBoxFailure.js",
 	"OnSuccess": "/PackedBoxTracking/Actions/SubmitSuceessMessage.action",
 	"ValidationRule": "/PackedBoxTracking/Rules/ValidateBoxData.js",
 	"ShowActivityIndicator": true,
@@ -15,13 +15,13 @@
 		"BoxId": "#Page:Main/#Control:BoxId/#Value",
 		"LicensePlate": "#Page:Main/#ClientData/InvDetail/LicensePlate",
 		"InvoiceNo": "#Page:Main/#Control:InvNo/#Value",
-		"LabelId": "#Page:Main/#Control:Content/#Value",
+		"LabelId": "#Page:Main/#Control:LabelId/#Value",
 		"LicensePlate1": "#Page:Main/#Control:LicensePlate1/#Value",
 		"LicensePlate2": "#Page:Main/#Control:LicensePlate2/#Value",
 		"LicensePlate3": "#Page:Main/#Control:LicensePlate3/#Value",
 		"LicensePlate4": "#Page:Main/#Control:LicensePlate4/#Value",
 		"BoxQty": "#Page:Main/#ClientData/InvDetail/BoxQty",
-		"OkFlag": "S",
+		"OkFlag": "",
 		"UserName": "",
 		"Matnr": "#Page:Main/#ClientData/InvDetail/Matnr"
 	},

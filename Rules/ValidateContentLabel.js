@@ -3,7 +3,7 @@
  * @param {IClientAPI} clientAPI
  */
 export default function ValidateContentLabel(clientAPI) {
-    let label = clientAPI.getValue();
+    const label = clientAPI.getValue();
 
     clientAPI.getPageProxy().getClientData().InvDetail.LabelId = "";
     clientAPI.clearValidation();

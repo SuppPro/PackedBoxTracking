@@ -6,7 +6,7 @@ export default function CheckInvoiceSuccess(clientAPI) {
     
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').clearValidation();
     
-    let data = clientAPI.actionResults.CheckInvoice.data._array;
+    const data = clientAPI.actionResults.CheckInvoice.data._array;
     if (data.length > 0) {
 
         clientAPI.getPageProxy().getClientData().InvDetail = {

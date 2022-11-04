@@ -6,10 +6,9 @@ export default function ValidateLicensePlate1(clientAPI) {
 
     clientAPI.clearValidation();
 
-    let lp = clientAPI.getValue(), flag, inv = clientAPI.getPageProxy().getClientData().InvDetail;
-    const licence = lp.split(":");
+    const lp = clientAPI.getValue(), licence = lp.split(":");
+    let flag, inv = clientAPI.getPageProxy().getClientData().InvDetail;
     inv[clientAPI.getName()] = "";
-
 
     if (lp.length === 30) {
 

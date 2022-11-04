@@ -4,14 +4,15 @@
  */
 export default function ValidateBoxData(clientAPI) {
 
-    let data = clientAPI.getPageProxy().getClientData().InvDetail, state = true;
+    const data = clientAPI.getPageProxy().getClientData().InvDetail; 
+    let state = true;
 
     if (!data) {
         state = false;
     } else {
-        let requiredkFields = ["BoxId", "LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"];
-        for (var i = 0; i < requiredkFields.length; i++) {
-            if (data[requiredkFields[i]] === undefined || data[requiredkFields[i]] === "") {
+        const reqFields = ["BoxId", "LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"];
+        for (var i = 0; i < reqFields.length; i++) {
+            if (data[reqFields[i]] === undefined || data[reqFields[i]] === "") {
                 state = false;
                 break;
             }
