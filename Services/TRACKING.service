@@ -1,0 +1,8 @@
+{
+	"DestinationName": "TRACKING",
+	"Headers": {
+	},
+	"OfflineEnabled": false,
+	"SourceType": "Mobile",
+	"RestService": false
+}

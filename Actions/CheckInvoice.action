@@ -1,0 +1,14 @@
+{
+	"_Type": "Action.Type.ODataService.Read",
+	"ActionResult": {
+		"_Name": "CheckInvoice"
+	},
+	"OnFailure": "/PackedBoxTracking/Rules/CheckInvoiceFailure.js",
+	"OnSuccess": "/PackedBoxTracking/Rules/CheckInvoiceSuccess.js",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "",
+	"Target": {
+		"Service": "/PackedBoxTracking/Services/TRACKING.service",
+		"EntitySet": "ValidateInvoiceSet"
+	}
+}

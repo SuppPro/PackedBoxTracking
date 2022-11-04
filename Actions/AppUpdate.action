@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/PackedBoxTracking/Rules/AppUpdateFailure.js",
+    "OnSuccess": "/PackedBoxTracking/Rules/AppUpdateSuccess.js"
+}

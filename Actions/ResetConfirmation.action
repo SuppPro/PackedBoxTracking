@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "ResetMsgAct"
+	},
+	"Message": "Are you sure ?",
+	"Title": "Reset Data",
+	"OKCaption": "Yes",
+	"OnOK": "/PackedBoxTracking/Rules/ResetData.js",
+	"CancelCaption": "No"
+}

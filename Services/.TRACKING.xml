@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="SHIV.PACKED_BOX_TRACKING_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="TransportIdHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="TransporterId"/>
+                </Key>
+                <Property Name="TransporterId" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Transporter ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Transporter Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="BoxDetails" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BoxId"/>
+                    <PropertyRef Name="LicensePlate"/>
+                    <PropertyRef Name="LabelId"/>
+                </Key>
+                <Property Name="BoxId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Box Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicensePlate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="License Plate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InvoiceNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="SD Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LabelId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Label ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicensePlate1" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="License Plate1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicensePlate2" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="License Plate2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicensePlate3" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="License Plate3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicensePlate4" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="License Plate4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BoxQty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DispatchId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Dispatch ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OkFlag" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Ok Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ScanDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="DispatchDetails" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BoxId"/>
+                    <PropertyRef Name="DispatchId"/>
+                </Key>
+                <Property Name="BoxId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Box Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DispatchId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Dispatch ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransporterId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Transporter ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VehicleNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Vehicle No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DriverName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Driver Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DriverLicense" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Driver License" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LoadingsDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LoadingsTime" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LoadingeDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LoadingeTime" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InvoiceNo" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ValidateInvoice" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Vbeln"/>
+                </Key>
+                <Property Name="Vbeln" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Number" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BoxQty" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="SHIV_PACKED_BOX_TRACKING_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="TransportIdHelpSet" EntityType="SHIV.PACKED_BOX_TRACKING_SRV.TransportIdHelp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="BoxDetailsSet" EntityType="SHIV.PACKED_BOX_TRACKING_SRV.BoxDetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="DispatchDetailsSet" EntityType="SHIV.PACKED_BOX_TRACKING_SRV.DispatchDetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ValidateInvoiceSet" EntityType="SHIV.PACKED_BOX_TRACKING_SRV.ValidateInvoice" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://172.16.12.125:8000/sap/opu/odata/shiv/PACKED_BOX_TRACKING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://172.16.12.125:8000/sap/opu/odata/shiv/PACKED_BOX_TRACKING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

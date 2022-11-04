@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "SaveMsg"
+	},
+	"Message": "Box data saved successfully",
+	"Title": "Success",
+	"OnOK": "/PackedBoxTracking/Rules/ResetData.js"
+}

@@ -1,0 +1,51 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "https://api.cf.ap10.hana.ondemand.com",
+		"Organization": "15e2de5e-38ca-4f75-8601-8b5bb5d04f8e",
+		"Space": "5cbdced5-3325-4216-8016-155bb14e7f58",
+		"Deploy": {
+			"Description": "",
+			"WebClient": {
+				"Runtime": "preview",
+				"URL": "https://mdk-webclient-runtime-preview.cfapps.sap.hana.ondemand.com/preview/"
+			},
+			"Destination": [
+				{
+					"CF": "TRACKING",
+					"MDK": "TRACKING",
+					"URL": ""
+				}
+			],
+			"Name": "ns.PackedBoxTracking",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"URL": "https://sona-blw-precision-forgings-limited-cloud-foundry-test-1d78e293.cfapps.ap10.hana.ondemand.com/nsPackedBoxTracking/index.html"
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.ap10.hana.ondemand.com/cockpit/v1/org/15e2de5e-38ca-4f75-8601-8b5bb5d04f8e/space/5cbdced5-3325-4216-8016-155bb14e7f58",
+		"AppId": "TRACKING",
+		"Destination": [
+			"TRACKING"
+		]
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=TRACKING&ClientId=b9b11255-6054-4f6f-aea7-e7cbf37bbaab&ServerUrl=https://cloud-foundry-test-libvku6v-dev-tracking.cfapps.ap10.hana.ondemand.com&SapCloudPlatformEndpoint=https://cloud-foundry-test-libvku6v-dev-tracking.cfapps.ap10.hana.ondemand.com&AuthorizationEndpointUrl=https://cloud-foundry-test-libvku6v-dev-tracking.cfapps.ap10.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://cloud-foundry-test-libvku6v-dev-tracking.cfapps.ap10.hana.ondemand.com&TokenUrl=https://cloud-foundry-test-libvku6v-dev-tracking.cfapps.ap10.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	"Build": {
+		"SourceMap": true,
+		"WMF": false
+	}
+}

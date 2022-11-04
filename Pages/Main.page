@@ -1,0 +1,121 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer1",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "InvNo",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Invoice Number",
+							"PlaceHolder": "Enter Value",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateInvoice.js",
+							"Enabled": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "BoxId",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Box ID",
+							"PlaceHolder": "Scan Box ID",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateBoxId.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "LicensePlate1",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "License Plate 1",
+							"PlaceHolder": "Scan License Plate 1",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "LicensePlate2",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "License Plate 2",
+							"PlaceHolder": "Scan License Plate 2",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "LicensePlate3",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "License Plate 3",
+							"PlaceHolder": "Scan License Plate 3",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "LicensePlate4",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "License Plate 4",
+							"PlaceHolder": "Scan License Plate 4",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Content",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Content Label",
+							"PlaceHolder": "Scan Content Label",
+							"OnValueChange": "/PackedBoxTracking/Rules/ValidateContentLabel.js",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						}
+					],
+					"Visible": true
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": ""
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Box Tracking",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "Save",
+				"Caption": "Save",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/PackedBoxTracking/Actions/SubmitBox.action"
+			},
+			{
+				"_Name": "Reset",
+				"Caption": "Reset",
+				"SystemItem": "Undo",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/PackedBoxTracking/Actions/ResetConfirmation.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

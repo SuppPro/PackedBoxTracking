@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/PackedBoxTracking/Actions/Service/InitializeOnlineFailureMessage.action",
+	"OnSuccess": "/PackedBoxTracking/Actions/Service/InitializeOnlineSuccessMessage.action",
+	"ShowActivityIndicator": true,
+	"Service": "/PackedBoxTracking/Services/TRACKING.service"
+}
