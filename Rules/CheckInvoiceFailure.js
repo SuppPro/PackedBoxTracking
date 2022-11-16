@@ -15,7 +15,10 @@ export default function CheckInvoiceFailure(clientAPI) {
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').clearValidation();
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').setValidationProperty('ValidationMessage', errMsg);
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').setValidationProperty('ValidationMessageColor', "FF0000");
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').redraw();
 
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').clearValidation();
     clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setEnabled(false);
     clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setValue("");
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').redraw();
 }

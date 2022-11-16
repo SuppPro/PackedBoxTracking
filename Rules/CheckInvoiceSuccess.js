@@ -16,7 +16,9 @@ export default function CheckInvoiceSuccess(clientAPI) {
             Number: data[0].Number
         };
 
+        clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').clearValidation();
         clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setEnabled(true);
         clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setValue("");
+        clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').redraw();
     }
 }

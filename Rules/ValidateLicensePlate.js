@@ -30,10 +30,10 @@ export default function ValidateLicensePlate1(clientAPI) {
         flag = false;
     }
     if (!flag) {
-        let msg = clientAPI.getName().split(/(?=[A-Z])/);
-        msg[1] = msg[1].split(/(?=[1-4])/).join(" ");
-        clientAPI.setValidationProperty('ValidationMessage', "Invalid " + msg.join(" "));
+        clientAPI.setValidationProperty('ValidationMessage', "Invalid " + clientAPI.getCaption());
         clientAPI.setValidationProperty('ValidationMessageColor', "FF0000");
+        clientAPI.setValue("");
+        clientAPI.redraw();
     } else {
         inv[clientAPI.getName()] = lp;
         inv.LicensePlate = licence[0];

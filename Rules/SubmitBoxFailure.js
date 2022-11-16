@@ -17,6 +17,13 @@ export default function SubmitBoxFailure(clientAPI) {
         errMsg += " Box Id";
         ["BoxId", "LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"].forEach(element => {
             inv[element] = "";
+            if (element === "BoxId") {
+                clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEnabled(true);
+                clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEditable(true);
+            } else {
+                clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEnabled(false);
+                clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEditable(false);
+            }
             clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setValue("");
         });
     } else if (err.search("Label") > 0) {

@@ -12,8 +12,6 @@ export default function ValidateBoxId(clientAPI) {
     if (boxId.length === 17) {
         if (boxId.substring(13) !== clientAPI.getPageProxy().getClientData().InvDetail.Matnr.substring(7, 11)) {
             state = false;
-            clientAPI.setValidationProperty('ValidationMessage', "Invalid Box ID");
-            clientAPI.setValidationProperty('ValidationMessageColor', "FF0000");
         } else {
             state = true;
             clientAPI.getPageProxy().getClientData().InvDetail.BoxId = boxId;
@@ -21,7 +19,14 @@ export default function ValidateBoxId(clientAPI) {
     } else {
         state = false;
     }
+    if (!state) {
+        clientAPI.setValidationProperty('ValidationMessage', "Invalid Box ID");
+        clientAPI.setValidationProperty('ValidationMessageColor', "FF0000");
+        clientAPI.setValue("");
+        clientAPI.redraw();
+    }
     ["LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"].forEach(element => {
+        clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).clearValidation();
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setEnabled(state);
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setValue("");
         clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).redraw();

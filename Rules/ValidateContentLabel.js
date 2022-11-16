@@ -11,6 +11,8 @@ export default function ValidateContentLabel(clientAPI) {
     if (label.length !== 27) {
         clientAPI.setValidationProperty('ValidationMessage', "Invalid Content Label");
         clientAPI.setValidationProperty('ValidationMessageColor', "FF0000");
+        clientAPI.setValue("");
+        clientAPI.redraw();
     } else {
         clientAPI.getPageProxy().getClientData().InvDetail.LabelId = label;
     }
