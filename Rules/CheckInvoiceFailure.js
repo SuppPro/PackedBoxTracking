@@ -17,8 +17,17 @@ export default function CheckInvoiceFailure(clientAPI) {
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').setValidationProperty('ValidationMessageColor', "FF0000");
     clientAPI.evaluateTargetPath('#Page:Main/#Control:InvNo').redraw();
 
-    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').clearValidation();
-    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setEnabled(false);
-    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setValue("");
-    clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').redraw();
+    // clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').clearValidation();
+    // clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setEnabled(false);
+    // clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').setValue("");
+    // clientAPI.evaluateTargetPath('#Page:Main/#Control:BoxId').redraw();
+
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:ScanSticker').setEnabled(false);
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:ScanSticker').setValue("");
+    clientAPI.evaluateTargetPath('#Page:Main/#Control:ScanSticker').redraw();
+
+    ["BoxId", "LicensePlate1", "LicensePlate2", "LicensePlate3", "LicensePlate4", "LabelId"].forEach(element => {
+        clientAPI.getPageProxy().getClientData().InvDetail[element] = "";
+        clientAPI.evaluateTargetPath('#Page:Main/#Control:' + element).setValue("");
+    });
 }

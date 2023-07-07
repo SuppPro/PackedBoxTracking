@@ -5,5 +5,5 @@
 	},
 	"Message": "Box data saved successfully",
 	"Title": "Success",
-	"OnOK": "/PackedBoxTracking/Rules/ResetData.js"
+	"OnOK": "/PackedBoxTracking/Rules/ResetStickers.js"
 }

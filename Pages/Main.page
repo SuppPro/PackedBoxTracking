@@ -18,14 +18,25 @@
 						},
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ScanSticker",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Scan",
+							"PlaceHolder": "Scan Sticker",
+							"OnValueChange": "/PackedBoxTracking/Rules/ScanSticker.js",
+							"KeyboardType": "Default",
+							"AlternateInput": "Barcode",
+							"Enabled": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "BoxId",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Box ID",
-							"PlaceHolder": "Scan Box ID",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateBoxId.js",
 							"KeyboardType": "Default",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						},
 						{
@@ -34,9 +45,8 @@
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "License Plate 1",
-							"PlaceHolder": "Scan License Plate 1",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						},
 						{
@@ -45,9 +55,8 @@
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "License Plate 2",
-							"PlaceHolder": "Scan License Plate 2",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						},
 						{
@@ -56,9 +65,8 @@
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "License Plate 3",
-							"PlaceHolder": "Scan License Plate 3",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						},
 						{
@@ -67,9 +75,8 @@
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "License Plate 4",
-							"PlaceHolder": "Scan License Plate 4",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateLicensePlate.js",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						},
 						{
@@ -78,9 +85,8 @@
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Content Label",
-							"PlaceHolder": "Scan Content Label",
 							"OnValueChange": "/PackedBoxTracking/Rules/ValidateContentLabel.js",
-							"AlternateInput": "Barcode",
+							"AlternateInput": "None",
 							"Enabled": false
 						}
 					],
