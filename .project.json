@@ -2,8 +2,8 @@
 	"Credential": "cf",
 	"CF": {
 		"Target": "https://api.cf.ap10.hana.ondemand.com",
-		"Organization": "a9ae898e-7c91-4565-85ad-48483d7c26d7",
-		"Space": "9495526b-d596-4acc-9c0e-3f731ee8d6e1",
+		"Organization": "15e2de5e-38ca-4f75-8601-8b5bb5d04f8e",
+		"Space": "5cbdced5-3325-4216-8016-155bb14e7f58",
 		"Deploy": {
 			"Destination": [
 				{
@@ -23,7 +23,7 @@
 	},
 	"MobileService": {
 		"Type": "standard",
-		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.ap10.hana.ondemand.com/cockpit/v1/org/a9ae898e-7c91-4565-85ad-48483d7c26d7/space/9495526b-d596-4acc-9c0e-3f731ee8d6e1",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.ap10.hana.ondemand.com/cockpit/v1/org/15e2de5e-38ca-4f75-8601-8b5bb5d04f8e/space/5cbdced5-3325-4216-8016-155bb14e7f58",
 		"AppId": "TRACKING",
 		"Destination": [
 			"TRACKING"

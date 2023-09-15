@@ -8,27 +8,43 @@ export default function ScanSticker(clientAPI) {
     let match = false;
 
     if (scanVal) {
-        if (scanVal.length === 17 && scanVal.substring(13) === clientAPI.getPageProxy().getClientData().InvDetail.Matnr.substring(7, 11)) {
+        // && scanVal.substring(13) === clientAPI.getPageProxy().getClientData().InvDetail.Matnr.substring(7, 11)
+        // && scanVal.substring(14) === clientAPI.getPageProxy().getClientData().InvDetail.Matnr.substring(8, 12)
+
+        if ((scanVal.length === 17) || (scanVal.length === 18)) {
             setStikerValue(clientAPI, "BoxId", scanVal);
             match = true;
         } else if (scanVal.length === 30) {
-            switch (scanVal.split(":")[1]) {
-                case "ZA":
-                    setStikerValue(clientAPI, "LicensePlate1", scanVal);
+
+            if (clientAPI.getPageProxy().getClientData().InvDetail.LicensePlate) {
+                if (scanVal.split(":")[0] === clientAPI.getPageProxy().getClientData().InvDetail.LicensePlate) {
                     match = true;
-                    break;
-                case "ZB":
-                    setStikerValue(clientAPI, "LicensePlate2", scanVal);
-                    match = true;
-                    break;
-                case "ZC":
-                    setStikerValue(clientAPI, "LicensePlate3", scanVal);
-                    match = true;
-                    break;
-                case "ZD":
-                    setStikerValue(clientAPI, "LicensePlate4", scanVal);
-                    match = true;
-                    break;
+                } else {
+                    match = false;
+                }
+            } else {
+                match = true;
+            }
+            if (match) {
+                switch (scanVal.split(":")[1]) {
+                    case "ZA":
+                        setStikerValue(clientAPI, "LicensePlate1", scanVal);
+                        match = true;
+                        break;
+                    case "ZB":
+                        setStikerValue(clientAPI, "LicensePlate2", scanVal);
+                        match = true;
+                        break;
+                    case "ZC":
+                        setStikerValue(clientAPI, "LicensePlate3", scanVal);
+                        match = true;
+                        break;
+                    case "ZD":
+                        setStikerValue(clientAPI, "LicensePlate4", scanVal);
+                        match = true;
+                        break;
+                }
+                clientAPI.getPageProxy().getClientData().InvDetail.LicensePlate = scanVal.split(":")[0];
             }
         } else if (scanVal.length === 27) {
             setStikerValue(clientAPI, "LabelId", scanVal);
